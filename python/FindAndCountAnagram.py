@@ -39,7 +39,7 @@ def isAnagram(s: str, t: str):
         sCount[s[i]] = 1 + sCount.get(s[i], 0)
         tCount[t[i]] = 1 + tCount.get(t[i], 0)
     print(f"sCount {sCount}")
-    print(f"tCount {tCount}")
+    print(f"tCount")
     # if sCount != tCount:
     #     print(f"IS Not ANOGRAM")
     #     return False
