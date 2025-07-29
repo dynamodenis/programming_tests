@@ -27,7 +27,7 @@ def findAnagrams(s: str, p: str):
     return res
 
 
-response = findAnagrams("cbaebabacd", "abc")
+#response = findAnagrams("cbaebabacd", "abc")
 
 
 def isAnagram(s: str, t: str):
@@ -38,7 +38,8 @@ def isAnagram(s: str, t: str):
     for i in range(len(s)):
         sCount[s[i]] = 1 + sCount.get(s[i], 0)
         tCount[t[i]] = 1 + tCount.get(t[i], 0)
-
+    print(f"sCount {sCount}")
+    print(f"tCount {tCount}")
     # if sCount != tCount:
     #     print(f"IS Not ANOGRAM")
     #     return False
