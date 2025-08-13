@@ -104,3 +104,5 @@ result_board_example = solution(board_example)
 print("\nResult Board (Example 1) after simulation:")
 for row in result_board_example:
     print(row)
+    
+    
