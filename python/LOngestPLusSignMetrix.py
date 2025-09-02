@@ -72,8 +72,11 @@ def maximumSquare(matrix: list[list[str]])->int:
         for c in range(cols):
             
             if matrix[r][c] == "1":
+                top = dp[r][c+1]
+                left = dp[r+1][c]
+                diag = dp[r][c]
                 print(f"row {r} col {c} dp[r][c+1] {dp[r][c+1]} dp[r+1][c] {dp[r+1][c]} dp[r][c] {dp[r][c]}")
-                dp[r+1][c+1] = 1 + min(dp[r][c+1], dp[r+1][c], dp[r][c])
+                dp[r+1][c+1] = 1 + min(top, left, diag)
                 
                 max_sqaure = max(max_sqaure, dp[r+1][c+1])
     for i in range(len(dp)):
@@ -88,4 +91,25 @@ matrix1 = [
     ["1","0","0","1","0"]
 ]
 
+# Result = 2
+
 maximumSquare(matrix1)
+
+
+Got it — Workplace Starter for info@prismmedia.co.ke. Here are the settings to use in Gmail, other mail clients, and on your website.
+
+Use this for incoming:
+
+IMAP (recommended): Host: workplace.truehost.cloud, Port: 993, Encryption: SSL/TLS, Username: info@prismmedia.co.ke, Password: your mailbox password
+POP3 (if you must): Host: workplace.truehost.cloud, Port: 995, Encryption: SSL/TLS, Username: info@prismmedia.co.ke, Password: your mailbox password
+Use this for outgoing (send email from Gmail or your site):
+
+SMTP: Host: workplace.truehost.cloud, Port: 587 (TLS) or 465 (SSL), Encryption: STARTTLS/TLS (use 465 for SSL), Authentication required: Yes, Username: info@prismmedia.co.ke, Password: your mailbox password
+SMTP auth is required for sending from other providers or your website.
+Notes you must know:
+
+Always use the full email as the username.
+If adding to Gmail, choose to add another email account and supply the SMTP details above; Gmail will ask to verify by sending a code to the mailbox.
+For WordPress or other website apps, use an SMTP plugin (WP Mail SMTP, Easy WP SMTP, or similar) and enter the SMTP host, port, TLS/SSL option, username and password. Set From address to info@prismmedia.co.ke and enable authentication.
+If your website is hosted on Truehost shared hosting, use SMTP (587/TLS) rather than PHP mail() — PHP mail is disabled on shared hosting.
+Do you want step-by-step instructions to add this account into Gmail or a WordPress site now?
