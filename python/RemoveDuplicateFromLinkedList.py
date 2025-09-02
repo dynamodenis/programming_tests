@@ -6,13 +6,13 @@
 class Solution:
     def removeDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
         print(f"head {head}")
-        curr = head
+        current = head
 
-        while curr:
-            while curr.next and curr.next.val == curr.val:
-                #We have a duplicate 
-                curr.next = curr.next.next
-            curr = curr.next
+        while current and current.next:
+            if current.val == current.next.val:
+                current.next = current.next.next
+            else:
+                current = current.next
         return head
     
 # Input: head = [1,2,3,3,4,4,5]
