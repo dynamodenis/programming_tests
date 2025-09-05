@@ -49,8 +49,7 @@ def solution(board: List[List[str]]):
                 current_idx_in_elements -= 1
             else:
                 board_after_fall[i][j] = "_"
-    for i in board_after_fall:
-        print(i)
+    
     # Identitfy explosion centers
     # Set to store(rows, col) cordinates of obstacles that are hit by the box
     explosion_centers = set()
