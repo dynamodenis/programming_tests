@@ -10,6 +10,7 @@
             maximum = max(maximum, area)
 
             # Greedy approach shift based on larger and smaller one
+            # LInear solution 0(n)
             if height[l] < height[r]:
                 l += 1
             else:
