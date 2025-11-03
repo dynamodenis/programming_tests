@@ -22,3 +22,5 @@ def subsets(nums: list[int]):
     return response
 
 subsets([1,2,3])
+
+#Response [[], [3], [2], [2, 3], [1], [1, 3], [1, 2], [1, 2, 3]]
